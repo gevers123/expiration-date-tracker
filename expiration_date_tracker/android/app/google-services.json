@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "790846303329",
+    "project_id": "expiration-date-tracker",
+    "storage_bucket": "expiration-date-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790846303329:android:7f8b1d0ebc7e9405bf8e20",
+        "android_client_info": {
+          "package_name": "com.example.expiration_date_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790846303329-j1gheoi0u356mdh7pqcgmt07gl9dlhk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.expiration_date_tracker",
+            "certificate_hash": "8c962e7227fedf1c0e146aa14c9475dcc0c956e0"
+          }
+        },
+        {
+          "client_id": "790846303329-dhn9bnnuie52rskclnklss4bvnpv8lkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgKs6QYc_BZpW7ti-GyITl5uKCWphODrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790846303329-dhn9bnnuie52rskclnklss4bvnpv8lkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
