@@ -17,9 +17,13 @@ class MyApp extends StatelessWidget {
       future: Firebase.initializeApp(),
       builder: (context, snapshot) {
         return StreamProvider<TheUser>.value(
-          value: AuthService().user,
-          initialData: null,
-          child: MaterialApp(home: Wrapper()),
+          // TheUser data comes down stream
+          value: AuthService().user, // specifies which stream to listen to
+          initialData: null, // initial data is null
+          child: MaterialApp(
+            // all widgets inside can access data from stream
+            home: Wrapper(),
+          ),
         );
       },
     );

@@ -7,12 +7,15 @@ import 'package:provider/provider.dart';
 class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<TheUser>(context);
+    final user = Provider.of<TheUser>(
+        context); // specifics which stream to listen to - now user contains TheUser data
     print(user);
 
     if (user == null) {
-      return Authenticate();
+      // if the user is not logged in, return Authenticate widget
+      return Authenticate(); // Authenticate() will determine whether to display login or register screen
     } else {
+      // if the user is logged in, return home screen
       return HomeScreen();
     }
   }
