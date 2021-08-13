@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:expiration_date_tracker/screens/login.dart';
+import 'package:expiration_date_tracker/screens/authenticate/login.dart';
 import 'package:expiration_date_tracker/screens/register.dart';
 
 class Authenticate extends StatefulWidget {

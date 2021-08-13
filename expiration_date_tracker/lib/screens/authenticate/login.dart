@@ -1,3 +1,4 @@
+import 'package:expiration_date_tracker/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,6 +12,8 @@ class LoginScreenState extends State<LoginScreen> {
   void initState() {
     super.initState();
   }
+
+  final AuthService _auth = AuthService();
 
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
@@ -35,6 +38,30 @@ class LoginScreenState extends State<LoginScreen> {
         onPressed: () {},
         child: Text(
           "Login",
+          textAlign: TextAlign.center,
+          style:
+              style.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+
+    final loginAsGuestButton = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Color(0xff952efc),
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () async {
+          dynamic result = await _auth.loginAsGuest();
+          if (result == null) {
+            print('error signing in');
+          } else {
+            print('signed in');
+          }
+        },
+        child: Text(
+          "Login as guest",
           textAlign: TextAlign.center,
           style:
               style.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
@@ -70,6 +97,8 @@ class LoginScreenState extends State<LoginScreen> {
                     codeField,
                     SizedBox(height: 25.0),
                     loginButton,
+                    SizedBox(height: 25.0),
+                    loginAsGuestButton,
                     SizedBox(
                       height: 35.0,
                     ),

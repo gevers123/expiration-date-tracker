@@ -4,7 +4,7 @@ class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   // sign in anon
-  Future signInAnon() async {
+  Future loginAsGuest() async {
     try {
       UserCredential credential = await _auth.signInAnonymously();
       User user = credential.user;
